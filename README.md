@@ -1,4 +1,4 @@
-https://itskaywat.github.io/construction-portfolio-project/contact.html
+https://itskaywat.github.io/construction-portfolio-project
 
 # BuildRight Construction - Demo Website
 
