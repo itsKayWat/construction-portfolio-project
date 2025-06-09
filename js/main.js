@@ -47,9 +47,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             if (isValid) {
-                // For demo purposes, show success message instead of actual form submission
-                const formWrapper = document.querySelector('.form-wrapper');
-                formWrapper.innerHTML = '<div class="alert alert-success" role="alert"><h4 class="alert-heading">Message Sent!</h4><p>Thank you for contacting us. We will get back to you shortly.</p></div>';
+                // If valid, submit the form to FormSubmit
+                contactForm.submit();
             }
         });
     }
