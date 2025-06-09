@@ -4,7 +4,7 @@ This is a demo construction company website created as part of a proposal. The w
 
 ## Live Demo
 
-The website is hosted on GitHub Pages at: [https://yourusername.github.io/construction-site-demo/](https://yourusername.github.io/construction-site-demo/)
+The website is hosted on GitHub Pages at: [https://itskaywat.github.io/construction-portfolio-project/](https://itskaywat.github.io/construction-portfolio-project/)
 
 ## Features
 
@@ -23,6 +23,7 @@ The website is hosted on GitHub Pages at: [https://yourusername.github.io/constr
 - Custom CSS for unique styling
 - Form validation with JavaScript
 - Project filtering functionality
+- End-to-end testing with Cypress
 
 ## Technologies Used
 
@@ -32,17 +33,39 @@ The website is hosted on GitHub Pages at: [https://yourusername.github.io/constr
 - Bootstrap 5
 - Font Awesome
 - Google Fonts
+- Cypress (for testing)
 
 ## How to Use
 
 1. Clone this repository to your local machine
    ```
-   git clone https://github.com/yourusername/construction-site-demo.git
+   git clone https://github.com/itsKayWat/construction-portfolio-project.git
    ```
 
 2. Open the project folder in your code editor
 
 3. Open `index.html` in your web browser to view the website
+
+## Testing
+
+This project includes end-to-end tests using Cypress. For detailed testing information, see [TESTING.md](TESTING.md).
+
+Quick start:
+
+```bash
+# Install dependencies
+npm install
+
+# Run tests in Cypress UI
+npx cypress open
+
+# Run tests in headless mode
+npx cypress run
+
+# Run tests against live site
+$env:TEST_LIVE="true"; npx cypress run  # Windows PowerShell
+TEST_LIVE=true npx cypress run  # Linux/Mac
+```
 
 ## Deployment
 

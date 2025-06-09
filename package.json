@@ -1,0 +1,30 @@
+{
+  "name": "construction-portfolio-project",
+  "version": "1.0.0",
+  "description": "This is a demo construction company website created as part of a proposal. The website is designed to showcase a professional construction business with services, projects, contact information, and a client questionnaire.",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "cypress:open": "cypress open",
+    "start": "http-server . -p 8080",
+    "test:live": "cross-env TEST_LIVE=true cypress run",
+    "test:record": "cypress run --record --key 43dd2dcc-1a65-4310-910f-ca45e067c948",
+    "test:live:record": "cross-env TEST_LIVE=true cypress run --record --key 43dd2dcc-1a65-4310-910f-ca45e067c948"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itsKayWat/construction-portfolio-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itsKayWat/construction-portfolio-project/issues"
+  },
+  "homepage": "https://github.com/itsKayWat/construction-portfolio-project#readme",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "cypress": "^14.4.1",
+    "http-server": "^14.1.1"
+  }
+}
