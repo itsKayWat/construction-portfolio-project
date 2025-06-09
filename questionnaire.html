@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Questionnaire | BuildRight Construction</title>
+    <meta name="description" content="Complete our client questionnaire to help us understand your construction project needs and provide you with the best service.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-hard-hat"></i> BuildRight
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="questionnaire.html">Client Questionnaire</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header bg-dark text-white py-5 mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mx-auto text-center">
+                    <h1>Client Questionnaire</h1>
+                    <p class="lead">Help us understand your project needs better</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Questionnaire Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="card border-0 shadow mb-5">
+                        <div class="card-body p-4">
+                            <div class="mb-4">
+                                <h3>Why Complete This Questionnaire?</h3>
+                                <p>This questionnaire will help us understand your construction needs better. By providing detailed information about your project, we can prepare a more accurate proposal and timeline. Your responses will be kept confidential and will only be used to assist in planning your project.</p>
+                            </div>
+                            
+                            <form id="questionnaireForm" class="questionnaire-form" action="https://formsubmit.co/your@email.com" method="POST">
+                                <!-- FormSubmit configuration -->
+                                <input type="hidden" name="_subject" value="New Client Questionnaire Submission">
+                                <input type="hidden" name="_next" value="thank-you.html">
+                                <input type="hidden" name="_template" value="table">
+                                <!-- Personal Information -->
+                                <div class="mb-4">
+                                    <h4 class="mb-3">Personal Information</h4>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="fullName" class="form-label">Full Name <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="fullName" name="fullName" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="email" class="form-label">Email Address <span class="text-danger">*</span></label>
+                                            <input type="email" class="form-control" id="email" name="email" required>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="phone" class="form-label">Phone Number <span class="text-danger">*</span></label>
+                                            <input type="tel" class="form-control" id="phone" name="phone" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="address" class="form-label">Project Address <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="address" name="address" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Project Details -->
+                                <div class="mb-4">
+                                    <h4 class="mb-3">Project Details</h4>
+                                    <div class="mb-3">
+                                        <label for="projectType" class="form-label">Project Type <span class="text-danger">*</span></label>
+                                        <select class="form-select" id="projectType" name="projectType" required>
+                                            <option value="" selected disabled>Select a project type</option>
+                                            <option value="new-residential">New Residential Construction</option>
+                                            <option value="residential-remodel">Residential Remodeling</option>
+                                            <option value="addition">Home Addition</option>
+                                            <option value="commercial-new">New Commercial Construction</option>
+                                            <option value="commercial-remodel">Commercial Remodeling</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3" id="otherProjectTypeDiv" style="display: none;">
+                                        <label for="otherProjectType" class="form-label">Please Specify Project Type</label>
+                                        <input type="text" class="form-control" id="otherProjectType" name="otherProjectType">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="projectDescription" class="form-label">Project Description <span class="text-danger">*</span></label>
+                                        <textarea class="form-control" id="projectDescription" name="projectDescription" rows="4" required placeholder="Please provide a detailed description of your project."></textarea>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="squareFootage" class="form-label">Approximate Square Footage</label>
+                                            <input type="number" class="form-control" id="squareFootage" name="squareFootage" placeholder="e.g., 2000">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="projectBudget" class="form-label">Estimated Budget Range</label>
+                                            <select class="form-select" id="projectBudget" name="projectBudget">
+                                                <option value="" selected disabled>Select budget range</option>
+                                                <option value="under-50k">Under $50,000</option>
+                                                <option value="50k-100k">$50,000 - $100,000</option>
+                                                <option value="100k-250k">$100,000 - $250,000</option>
+                                                <option value="250k-500k">$250,000 - $500,000</option>
+                                                <option value="500k-1m">$500,000 - $1,000,000</option>
+                                                <option value="over-1m">Over $1,000,000</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Timeline -->
+                                <div class="mb-4">
+                                    <h4 class="mb-3">Timeline and Scheduling</h4>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="expectedStartDate" class="form-label">When would you like to start the project?</label>
+                                            <input type="date" class="form-control" id="expectedStartDate" name="expectedStartDate">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="completionNeeds" class="form-label">Do you have a required completion date?</label>
+                                            <input type="date" class="form-control" id="completionNeeds" name="completionNeeds">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Are there any specific timing considerations we should be aware of?</label>
+                                        <textarea class="form-control" id="timingConsiderations" name="timingConsiderations" rows="3" placeholder="Examples: Events, holidays, seasonal timing, etc."></textarea>
+                                    </div>
+                                </div>
+                                
+                                <!-- Project Goals and Requirements -->
+                                <div class="mb-4">
+                                    <h4 class="mb-3">Project Goals and Requirements</h4>
+                                    <div class="mb-3">
+                                        <label for="projectGoals" class="form-label">What are your primary goals for this project? <span class="text-danger">*</span></label>
+                                        <textarea class="form-control" id="projectGoals" name="projectGoals" rows="3" required placeholder="What do you want to achieve with this project?"></textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="specialRequirements" class="form-label">Are there any special requirements, features, or materials you're interested in?</label>
+                                        <textarea class="form-control" id="specialRequirements" name="specialRequirements" rows="3" placeholder="Examples: Energy efficiency, specific materials, smart home features, etc."></textarea>
+                                    </div>
+                                </div>
+                                
+                                <!-- Additional Information -->
+                                <div class="mb-4">
+                                    <h4 class="mb-3">Additional Information</h4>
+                                    <div class="mb-3">
+                                        <label class="form-label">How did you hear about us?</label>
+                                        <select class="form-select" id="referralSource" name="referralSource">
+                                            <option value="" selected disabled>Select an option</option>
+                                            <option value="internet-search">Internet Search</option>
+                                            <option value="social-media">Social Media</option>
+                                            <option value="referral">Referral from Friend/Family</option>
+                                            <option value="previous-client">Previous Client</option>
+                                            <option value="advertisement">Advertisement</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="additionalInformation" class="form-label">Anything else you would like us to know?</label>
+                                        <textarea class="form-control" id="additionalInformation" name="additionalInformation" rows="3"></textarea>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="contactConsent" name="contactConsent" required>
+                                        <label class="form-check-label" for="contactConsent">
+                                            I consent to being contacted by BuildRight Construction regarding my project inquiry <span class="text-danger">*</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary btn-lg w-100">Submit Questionnaire</button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <p class="lead">Need help completing this form?</p>
+                        <p>Contact us at <strong>(555) 123-4567</strong> or <strong>info@buildright.com</strong></p>
+                        <a href="contact.html" class="btn btn-outline-primary">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 mb-4">
+                    <h5>BuildRight Construction</h5>
+                    <p>Building quality projects since 2005. Licensed, bonded, and insured for your peace of mind.</p>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5>Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 123 Construction Ave, City, State</li>
+                        <li><i class="fas fa-phone me-2"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@buildright.com</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="services.html" class="text-white">Services</a></li>
+                        <li><a href="projects.html" class="text-white">Projects</a></li>
+                        <li><a href="about.html" class="text-white">About Us</a></li>
+                        <li><a href="contact.html" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5>Follow Us</h5>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-facebook fa-2x"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-twitter fa-2x"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-instagram fa-2x"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-linkedin fa-2x"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-12 text-center">
+                    <p class="mb-0">&copy; 2023 BuildRight Construction. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    
+    <script>
+        // Show/hide "Other" project type field
+        document.getElementById('projectType').addEventListener('change', function() {
+            const otherDiv = document.getElementById('otherProjectTypeDiv');
+            if(this.value === 'other') {
+                otherDiv.style.display = 'block';
+            } else {
+                otherDiv.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects | BuildRight Construction</title>
+    <meta name="description" content="View our portfolio of completed construction projects including residential homes, commercial buildings, and renovations.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Additional styles for the projects page */
+        .filter-btn {
+            border: none;
+            background: none;
+            font-weight: 600;
+            color: var(--secondary-color);
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .project-item {
+            margin-bottom: 30px;
+        }
+        
+        .project-gallery .card {
+            border: none;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            height: 100%;
+        }
+        
+        .project-gallery .card-img-top {
+            height: 240px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .project-gallery .card:hover .card-img-top {
+            transform: scale(1.05);
+        }
+        
+        .project-detail {
+            padding: 30px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        
+        .project-detail-img {
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-meta {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .project-meta p {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-hard-hat"></i> BuildRight
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="questionnaire.html">Client Questionnaire</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header bg-dark text-white py-5 mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mx-auto text-center">
+                    <h1>Our Projects</h1>
+                    <p class="lead">View our portfolio of completed construction projects</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Projects Gallery -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <div class="project-filters">
+                        <button class="filter-btn active" data-filter="all">All Projects</button>
+                        <button class="filter-btn" data-filter="residential">Residential</button>
+                        <button class="filter-btn" data-filter="commercial">Commercial</button>
+                        <button class="filter-btn" data-filter="renovation">Renovations</button>
+                        <button class="filter-btn" data-filter="interior">Interior Design</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row project-gallery">
+                <!-- Residential Projects -->
+                <div class="col-md-4 project-item residential">
+                    <div class="card mb-4">
+                        <img src="https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="Modern Home Construction">
+                        <div class="card-body">
+                            <h5 class="card-title">Modern Residential Home</h5>
+                            <p class="card-text">A custom-built 3,500 sq ft modern home with energy-efficient features.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-secondary">Residential</span>
+                                <a href="#project1" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#project1">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 project-item residential">
+                    <div class="card mb-4">
+                        <img src="https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="Luxury Family Home">
+                        <div class="card-body">
+                            <h5 class="card-title">Luxury Family Home</h5>
+                            <p class="card-text">5-bedroom luxury home with custom finishes and outdoor entertainment area.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-secondary">Residential</span>
+                                <a href="#project2" class="btn btn-sm btn-outline-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 project-item residential">
+                    <div class="card mb-4">
+                        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="Contemporary Townhouse">
+                        <div class="card-body">
+                            <h5 class="card-title">Contemporary Townhouse</h5>
+                            <p class="card-text">A 3-story townhouse with rooftop terrace and modern finishes.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-secondary">Residential</span>
+                                <a href="#project3" class="btn btn-sm btn-outline-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Commercial Projects -->
+                <div class="col-md-4 project-item commercial">
+                    <div class="card mb-4">
+                        <img src="https://images.unsplash.com/photo-1565708097881-9df3e273c3d9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="Commercial Office Building">
+                        <div class="card-body">
+                            <h5 class="card-title">Downtown Office Complex</h5>
+                            <p class="card-text">A 6-story commercial building featuring modern design and amenities.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-secondary">Commercial</span>
+                                <a href="#project4" class="btn btn-sm btn-outline-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 project-item commercial">
+                    <div class="card mb-4">
+                        <img src="https://images.unsplash.com/photo-1561518776-e76a5e48f731?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="Retail Shopping Center">
+                        <div class="card-body">
+                            <h5 class="card-title">Retail Shopping Center</h5>
+                            <p class="card-text">Modern shopping center with 15 retail units and parking facilities.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-secondary">Commercial</span>
+                                <a href="#project5" class="btn btn-sm btn-outline-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 project-item commercial">
+                    <div class="card mb-4">
+                        <img src="https://images.unsplash.com/photo-1623298317883-6b70254edf31?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="Restaurant Build">
+                        <div class="card-body">
+                            <h5 class="card-title">Fine Dining Restaurant</h5>
+                            <p class="card-text">Complete construction of a 5,000 sq ft upscale dining establishment.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-secondary">Commercial</span>
+                                <a href="#project6" class="btn btn-sm btn-outline-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Renovations -->
+                <div class="col-md-4 project-item renovation">
+                    <div class="card mb-4">
+                        <img src="https://images.unsplash.com/photo-1574362848149-11496d93a7c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="Kitchen Renovation">
+                        <div class="card-body">
+                            <h5 class="card-title">Luxury Kitchen Remodel</h5>
+                            <p class="card-text">Complete renovation of an outdated kitchen into a modern cooking space.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-secondary">Renovation</span>
+                                <a href="#project7" class="btn btn-sm btn-outline-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 project-item renovation">
+                    <div class="card mb-4">
+                        <img src="https://images.unsplash.com/photo-1632829882891-5047ccc421bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="Bathroom Renovation">
+                        <div class="card-body">
+                            <h5 class="card-title">Master Bathroom Renovation</h5>
+                            <p class="card-text">High-end bathroom renovation with custom tile work and fixtures.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-secondary">Renovation</span>
+                                <a href="#project8" class="btn btn-sm btn-outline-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 project-item renovation interior">
+                    <div class="card mb-4">
+                        <img src="https://images.unsplash.com/photo-1617104551722-3b2d51366400?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="Home Renovation">
+                        <div class="card-body">
+                            <h5 class="card-title">Full Home Renovation</h5>
+                            <p class="card-text">Complete renovation of a 1970's home with modern updates throughout.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-secondary">Renovation</span>
+                                <a href="#project9" class="btn btn-sm btn-outline-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Interior Design -->
+                <div class="col-md-4 project-item interior">
+                    <div class="card mb-4">
+                        <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="Modern Living Room">
+                        <div class="card-body">
+                            <h5 class="card-title">Modern Living Space</h5>
+                            <p class="card-text">Interior design and furnishing for an open concept living area.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-secondary">Interior Design</span>
+                                <a href="#project10" class="btn btn-sm btn-outline-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 project-item interior">
+                    <div class="card mb-4">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="Office Interior">
+                        <div class="card-body">
+                            <h5 class="card-title">Executive Office Design</h5>
+                            <p class="card-text">Corporate office interior design focusing on functionality and style.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-secondary">Interior Design</span>
+                                <a href="#project11" class="btn btn-sm btn-outline-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 project-item interior">
+                    <div class="card mb-4">
+                        <img src="https://images.unsplash.com/photo-1617103996702-96ff29b1c467?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="Restaurant Interior">
+                        <div class="card-body">
+                            <h5 class="card-title">Restaurant Interior</h5>
+                            <p class="card-text">Complete interior design for a new upscale restaurant in the city center.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-secondary">Interior Design</span>
+                                <a href="#project12" class="btn btn-sm btn-outline-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div class="modal fade" id="project1" tabindex="-1" aria-labelledby="project1Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="project1Label">Modern Residential Home</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <img src="https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="img-fluid rounded" alt="Modern Home Construction">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="project-meta">
+                                <p><strong>Project Type:</strong> Residential Construction</p>
+                                <p><strong>Location:</strong> Lakeside Community</p>
+                                <p><strong>Size:</strong> 3,500 sq ft</p>
+                                <p><strong>Duration:</strong> 8 months</p>
+                                <p><strong>Year:</strong> 2022</p>
+                            </div>
+                            <h5>Project Overview</h5>
+                            <p>This modern residential home was designed with clean lines and an open floor plan. The project featured energy-efficient windows, solar panel installation, and smart home technology throughout.</p>
+                            <h5>Key Features</h5>
+                            <ul>
+                                <li>4 bedrooms, 3.5 bathrooms</li>
+                                <li>Open concept kitchen and living area</li>
+                                <li>Energy-efficient appliances and HVAC system</li>
+                                <li>Custom cabinetry and millwork</li>
+                                <li>Indoor-outdoor living spaces with retractable glass walls</li>
+                                <li>Smart home technology integration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="contact.html" class="btn btn-primary">Contact Us About Your Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-primary text-white" id="cta">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 mx-auto text-center">
+                    <h2>Ready to Start Your Construction Project?</h2>
+                    <p class="lead mb-4">Contact us today for a free consultation and quote on your next project.</p>
+                    <a href="contact.html" class="btn btn-light btn-lg">Contact Us Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 mb-4">
+                    <h5>BuildRight Construction</h5>
+                    <p>Building quality projects since 2005. Licensed, bonded, and insured for your peace of mind.</p>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5>Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 123 Construction Ave, City, State</li>
+                        <li><i class="fas fa-phone me-2"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@buildright.com</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="services.html" class="text-white">Services</a></li>
+                        <li><a href="projects.html" class="text-white">Projects</a></li>
+                        <li><a href="about.html" class="text-white">About Us</a></li>
+                        <li><a href="contact.html" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5>Follow Us</h5>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-facebook fa-2x"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-twitter fa-2x"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-instagram fa-2x"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-linkedin fa-2x"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-12 text-center">
+                    <p class="mb-0">&copy; 2023 BuildRight Construction. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html> 
